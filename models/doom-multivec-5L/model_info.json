@@ -1,0 +1,33 @@
+{
+  "model_type": "DOOM-MultiVec-Hash",
+  "description": "ModernBERT + Hash Embeddings for DOOM ASCII game-state understanding",
+  "parameters": {
+    "total": "1.3165M",
+    "total_raw": 1316480,
+    "embeddings": "0.0045M",
+    "embeddings_raw": 4480,
+    "transformer": "1.3120M",
+    "transformer_raw": 1312000
+  },
+  "architecture": {
+    "hidden_size": 128,
+    "num_layers": 5,
+    "num_attention_heads": 4,
+    "intermediate_size": 512,
+    "hash_projections": 16,
+    "max_position_embeddings": 1536,
+    "local_attention": 128,
+    "global_attn_every_n_layers": 3
+  },
+  "tokenizer": {
+    "type": "char-level ASCII",
+    "vocab_size": 75,
+    "model_max_length": 1200
+  },
+  "colbert": {
+    "embedding_size": 32,
+    "query_length": 48,
+    "document_length": 1100
+  },
+  "embedding_savings": "75.0%"
+}

@@ -1,0 +1,85 @@
+site_name: DOOM MultiVec
+site_description: "A tiny multi-vector embedding model that plays DOOM on a Raspberry Pi Zero 2W"
+site_url: https://github.com/david/doom-multivec
+repo_url: https://github.com/david/doom-multivec
+repo_name: doom-multivec
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+    - content.code.annotate
+  palette:
+    - scheme: default
+      primary: red
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: red
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            docstring_style: google
+            show_source: true
+            members_order: source
+            show_root_heading: true
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.arithmatex:
+      generic: true
+  - tables
+  - toc:
+      permalink: true
+  - attr_list
+  - md_in_html
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Installation: getting-started/installation.md
+    - Quick Start: getting-started/quickstart.md
+  - Guide:
+    - Architecture: guide/architecture.md
+    - Data Pipeline: guide/data-pipeline.md
+    - Training: guide/training.md
+    - Inference: guide/inference.md
+    - Gameplay: guide/gameplay.md
+    - Benchmark: guide/benchmark.md
+    - Deployment: guide/deployment.md
+  - API Reference:
+    - Model: api/model.md
+    - ASCII Converter: api/ascii.md
+    - Training: api/training.md
+    - Inference: api/inference.md
+  - About:
+    - Contributing: about/contributing.md
+    - License: about/license.md

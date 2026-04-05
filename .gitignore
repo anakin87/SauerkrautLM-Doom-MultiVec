@@ -1,0 +1,64 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyc
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# ML model artifacts (general)
+*.onnx
+
+# Large video files
+*.mov
+*.mp4
+
+# Claude Code internals
+CLAUDE.md
+.claude/
+
+# Data and output
+data/
+output/
+benchmark_*.json
+
+# Weights & Biases
+wandb/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# MkDocs build
+site/
+
+# VizDoom
+_vizdoom.ini
+
+# LaTeX build artifacts
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.blg
+paper/*.bbl
+texput.log
+
+# Training logs
+training.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Keep docs video via exception
+!docs/assets/*.mp4

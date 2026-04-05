@@ -1,0 +1,15 @@
+{
+  "additional_special_tokens": [
+    "[ACT_SHOOT]",
+    "[ACT_MOVE_FWD]",
+    "[ACT_TURN_LEFT]",
+    "[ACT_TURN_RIGHT]",
+    "[ACT_STRAFE_LEFT]",
+    "[ACT_STRAFE_RIGHT]"
+  ],
+  "cls_token": "[CLS]",
+  "mask_token": "[MASK]",
+  "pad_token": "[PAD]",
+  "sep_token": "[SEP]",
+  "unk_token": "[UNK]"
+}

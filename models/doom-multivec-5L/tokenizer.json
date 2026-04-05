@@ -1,0 +1,274 @@
+{
+  "version": "1.0",
+  "truncation": null,
+  "padding": null,
+  "added_tokens": [
+    {
+      "id": 0,
+      "content": "[PAD]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 1,
+      "content": "[UNK]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 2,
+      "content": "[CLS]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 3,
+      "content": "[SEP]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 4,
+      "content": "[MASK]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 69,
+      "content": "[ACT_SHOOT]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 70,
+      "content": "[ACT_MOVE_FWD]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 71,
+      "content": "[ACT_TURN_LEFT]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 72,
+      "content": "[ACT_TURN_RIGHT]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 73,
+      "content": "[ACT_STRAFE_LEFT]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 74,
+      "content": "[ACT_STRAFE_RIGHT]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    }
+  ],
+  "normalizer": null,
+  "pre_tokenizer": {
+    "type": "Split",
+    "pattern": {
+      "String": ""
+    },
+    "behavior": "Isolated",
+    "invert": false
+  },
+  "post_processor": {
+    "type": "TemplateProcessing",
+    "single": [
+      {
+        "SpecialToken": {
+          "id": "[CLS]",
+          "type_id": 0
+        }
+      },
+      {
+        "Sequence": {
+          "id": "A",
+          "type_id": 0
+        }
+      },
+      {
+        "SpecialToken": {
+          "id": "[SEP]",
+          "type_id": 0
+        }
+      }
+    ],
+    "pair": [
+      {
+        "SpecialToken": {
+          "id": "[CLS]",
+          "type_id": 0
+        }
+      },
+      {
+        "Sequence": {
+          "id": "A",
+          "type_id": 0
+        }
+      },
+      {
+        "SpecialToken": {
+          "id": "[SEP]",
+          "type_id": 0
+        }
+      },
+      {
+        "Sequence": {
+          "id": "B",
+          "type_id": 1
+        }
+      },
+      {
+        "SpecialToken": {
+          "id": "[SEP]",
+          "type_id": 1
+        }
+      }
+    ],
+    "special_tokens": {
+      "[CLS]": {
+        "id": "[CLS]",
+        "ids": [
+          2
+        ],
+        "tokens": [
+          "[CLS]"
+        ]
+      },
+      "[SEP]": {
+        "id": "[SEP]",
+        "ids": [
+          3
+        ],
+        "tokens": [
+          "[SEP]"
+        ]
+      }
+    }
+  },
+  "decoder": {
+    "type": "Fuse"
+  },
+  "model": {
+    "type": "WordLevel",
+    "vocab": {
+      "[PAD]": 0,
+      "[UNK]": 1,
+      "[CLS]": 2,
+      "[SEP]": 3,
+      "[MASK]": 4,
+      " ": 5,
+      ".": 6,
+      ":": 7,
+      "-": 8,
+      "=": 9,
+      "+": 10,
+      "*": 11,
+      "#": 12,
+      "%": 13,
+      "@": 14,
+      "\n": 15,
+      "E": 16,
+      "H": 17,
+      "A": 18,
+      "D": 19,
+      "W": 20,
+      "K": 21,
+      "X": 22,
+      "a": 23,
+      "b": 24,
+      "c": 25,
+      "d": 26,
+      "e": 27,
+      "f": 28,
+      "g": 29,
+      "h": 30,
+      "i": 31,
+      "j": 32,
+      "k": 33,
+      "l": 34,
+      "m": 35,
+      "n": 36,
+      "o": 37,
+      "p": 38,
+      "q": 39,
+      "r": 40,
+      "s": 41,
+      "t": 42,
+      "u": 43,
+      "v": 44,
+      "w": 45,
+      "x": 46,
+      "y": 47,
+      "z": 48,
+      "0": 49,
+      "1": 50,
+      "2": 51,
+      "3": 52,
+      "4": 53,
+      "5": 54,
+      "6": 55,
+      "7": 56,
+      "8": 57,
+      "9": 58,
+      "!": 59,
+      "?": 60,
+      ",": 61,
+      ";": 62,
+      "(": 63,
+      ")": 64,
+      "'": 65,
+      "\"": 66,
+      "/": 67,
+      "_": 68,
+      "[ACT_SHOOT]": 69,
+      "[ACT_MOVE_FWD]": 70,
+      "[ACT_TURN_LEFT]": 71,
+      "[ACT_TURN_RIGHT]": 72,
+      "[ACT_STRAFE_LEFT]": 73,
+      "[ACT_STRAFE_RIGHT]": 74
+    },
+    "unk_token": "[UNK]"
+  }
+}

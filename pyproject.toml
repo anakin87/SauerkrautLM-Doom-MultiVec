@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "doom-multivec"
+version = "0.1.0"
+description = "Multi-vector ColBERT model for DOOM game-state understanding via ASCII representations"
+requires-python = ">=3.10"
+dependencies = [
+    "torch",
+    "transformers",
+    "sentence-transformers",
+    "pylate",
+    "numpy",
+    "Pillow",
+    "datasets",
+]
+
+[project.optional-dependencies]
+dev = [
+    "vizdoom",
+    "wandb",
+    "onnx",
+    "onnxruntime",
+    "pytest",
+    "mkdocs-material",
+    "mkdocstrings[python]",
+]
+raspi = [
+    "onnxruntime",
+    "numpy",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
